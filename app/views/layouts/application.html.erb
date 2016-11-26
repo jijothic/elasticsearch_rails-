@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>ElasticsearchRails</title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
-  <%= csrf_meta_tag %>
-</head>
-<body>
+  <head>
+    <title>Elasticsearch</title>
+    <%= csrf_meta_tags %>
 
-<%= yield %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
 
-</body>
+  <body>
+    <%=render 'search/form'%>
+    <%= yield %>
+  </body>
 </html>
